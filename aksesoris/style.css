@@ -1,0 +1,223 @@
+/* Admin Panel Styles - Tambahkan di <style> */
+.admin-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    z-index: 5000;
+    display: none;
+}
+
+.admin-panel.active {
+    display: block;
+}
+
+.admin-login-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: var(--shadow);
+}
+
+.admin-login-content h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.admin-dashboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 1200px;
+    height: 100vh;
+    background: white;
+    overflow-y: auto;
+}
+
+.admin-header {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.admin-logout {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.admin-logout:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.orders-header {
+    padding: 0 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+
+.orders-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.export-btn {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#searchOrders {
+    padding: 0.7rem;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.orders-table {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.order-row {
+    display: flex;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.2s;
+}
+
+.order-row:hover {
+    background: #f8f9fa;
+}
+
+.order-id {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.order-status {
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-pending { background: #fff3cd; color: #856404; }
+.status-shipped { background: #d1ecf1; color: #0c5460; }
+.status-delivered { background: #d4edda; color: #155724; }
+
+.customer-info {
+    flex: 1;
+}
+
+.customer-name {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.customer-details {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.order-total {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.status-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.status-btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn-ship { background: #17a2b8; color: white; }
+.btn-deliver { background: #28a745; color: white; }
+.btn-cancel { background: #dc3545; color: white; }
+
+/* Admin Button in Header */
+.admin-access {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 1001;
+    transition: all 0.3s;
+}
+
+.admin-access:hover {
+    transform: scale(1.1) rotate(90deg);
+}
